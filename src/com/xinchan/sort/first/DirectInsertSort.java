@@ -1,8 +1,8 @@
-package com.xinchan.sort;
+package sort.first;
 
 import java.util.Arrays;
 
-import static com.xinchan.sort.BubbleSort.createUnsortedArray;
+import static sort.first.BubbleSort.createUnsortedArray;
 
 /**
  * 测试 直接插入排序

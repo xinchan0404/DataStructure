@@ -1,4 +1,4 @@
-package com.xinchan.sort;
+package sort.first;
 
 /**
  * @author xinchan
