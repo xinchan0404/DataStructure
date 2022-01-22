@@ -24,6 +24,9 @@ public class SortCompare {
         if (alg.equals("Shell")) {
             new ShellSort().sort(arr);
         }
+        if (alg.equals("Merge")) {
+            new MergeSort().sort(arr);
+        }
         return System.currentTimeMillis() - startMs;
     }
 

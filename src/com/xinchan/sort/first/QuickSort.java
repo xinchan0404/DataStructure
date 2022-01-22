@@ -17,7 +17,7 @@ public class QuickSort {
 //        int[] randomArray = {-9, 78, 0, 23, -567, 70};
 //        int[] randomArray = {1, 2, 3, 4, 6, 7, 2, 8};
 //        int[] randomArray = {1, 2, 3, 4, 5, 6, 7, 8};
-        int[] randomArray = {-1, 3, 0, 0, 1, 2, 3};
+        int[] randomArray = {1,2,1,2,1,2};
 
         System.out.println("快速排序前：");
         System.out.println(Arrays.toString(randomArray));
