@@ -1,4 +1,4 @@
-package sort.second;
+package com.xinchan.sort.second;
 
 import java.util.Arrays;
 import java.util.Random;

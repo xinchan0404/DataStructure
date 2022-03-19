@@ -1,6 +1,6 @@
-package sort.second;
+package com.xinchan.sort.second;
 
-import static sort.second.Utils.*;
+import static com.xinchan.sort.second.Utils.*;
 
 /**
  * 快速排序

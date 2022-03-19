@@ -1,6 +1,6 @@
-package sort.second;
+package com.xinchan.sort.second;
 
-import static sort.second.Utils.*;
+import static com.xinchan.sort.second.Utils.*;
 
 /**
  * 归并排序
@@ -9,9 +9,6 @@ import static sort.second.Utils.*;
  * @version 1.0.1 2022-01-20
  */
 public class MergeSort {
-    /*
-     * instance field
-     */
     private int[] auxArr;
 
     /**

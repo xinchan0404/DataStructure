@@ -1,8 +1,8 @@
-package sort.first;
+package com.xinchan.sort.first;
 
 import java.util.Arrays;
 
-import static sort.first.BubbleSort.createUnsortedArray;
+import static com.xinchan.sort.first.BubbleSort.createUnsortedArray;
 
 /**
  * @author zhengxin

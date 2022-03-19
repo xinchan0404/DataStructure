@@ -1,6 +1,6 @@
-package sort.second;
+package com.xinchan.sort.second;
 
-import static sort.second.Utils.randomArray;
+import static com.xinchan.sort.second.Utils.randomArray;
 
 /**
  * @author xinchan
