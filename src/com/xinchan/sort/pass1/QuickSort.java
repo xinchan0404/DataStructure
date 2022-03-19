@@ -1,4 +1,4 @@
-package com.xinchan.sort.first;
+package com.xinchan.sort.pass1;
 
 import java.util.Arrays;
 

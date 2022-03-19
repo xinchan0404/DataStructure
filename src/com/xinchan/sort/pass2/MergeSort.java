@@ -1,6 +1,6 @@
-package com.xinchan.sort.second;
+package com.xinchan.sort.pass2;
 
-import static com.xinchan.sort.second.Utils.*;
+import static com.xinchan.sort.pass2.Utils.*;
 
 /**
  * 归并排序

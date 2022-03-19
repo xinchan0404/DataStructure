@@ -1,6 +1,6 @@
-package com.xinchan.sort.third;
+package com.xinchan.sort.pass3;
 
-import static com.xinchan.sort.third.Utils.*;
+import static com.xinchan.sort.pass3.Utils.*;
 
 /**
  * @author xinchan

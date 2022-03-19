@@ -1,4 +1,4 @@
-package com.xinchan.sort.third;
+package com.xinchan.sort.pass3;
 
 import java.util.Arrays;
 import java.util.Random;
