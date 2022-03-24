@@ -18,26 +18,25 @@ public class MergeSort {
         if (left >= right) {
             return;
         }
+
         int mid = (left + right) >>> 1;
         sort(arr, left, mid);
         sort(arr, mid + 1, right);
-        merge(arr, left, right, mid);
+        merge(arr, left, right);
     }
 
-    private void merge(int[] arr, int left, int right, int mid) {
+    private void merge(int[] arr, int left, int right) {
         System.arraycopy(arr, left, auxArr, left, right - left + 1);
+
+        int mid = (left + right) >>> 1;
         int l = left;
         int r = mid + 1;
         for (int i = left; i <= right; i++) {
             if (l > mid) {
                 arr[i] = auxArr[r++];
-//                System.arraycopy(auxArr, r, arr, r, right - r + 1);
-//                break;
             } else if (r > right) {
                 arr[i] = auxArr[l++];
-//                System.arraycopy(auxArr, l, arr, r - mid - 1 + l,mid - l + 1);
-//                break;
-            } else if (less(auxArr[l], auxArr[r])) {
+            } else if(less(auxArr[l], auxArr[r])) {
                 arr[i] = auxArr[l++];
             } else {
                 arr[i] = auxArr[r++];

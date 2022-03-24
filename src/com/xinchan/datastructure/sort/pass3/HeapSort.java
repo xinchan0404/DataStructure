@@ -13,7 +13,7 @@ public class HeapSort {
             adjustHeap(arr, father, arr.length);
         }
 
-        for (int i = arr.length - 1; i > 0; i--) {
+        for (int i = arr.length - 1; i >= 0; i--) {
             swap(arr, 0, i);
             adjustHeap(arr, 0, i);
         }
@@ -37,7 +37,7 @@ public class HeapSort {
 
     public static void main(String[] args) {
         HeapSort heapSort = new HeapSort();
-        int[] arr = randomArray(10000000);
+        int[] arr = randomArray(1000);
 
 //        show(arr);
         heapSort.heapSort(arr);

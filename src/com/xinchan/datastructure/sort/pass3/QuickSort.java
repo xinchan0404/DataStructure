@@ -11,6 +11,7 @@ public class QuickSort {
     public void quickSort(int[] arr) {
         sort(arr, 0, arr.length - 1);
     }
+
     private void sort(int[] arr, int left, int right) {
         if (left >= right) {
             return;
@@ -24,10 +25,10 @@ public class QuickSort {
     private int partition(int[] arr, int left, int right) {
         int pivot = arr[(left + right) >>> 1];
         while (left < right) {
-            while (less(arr[left],pivot)) {
+            while (arr[left] < pivot) {
                 left++;
             }
-            while (less(pivot, arr[right])) {
+            while (arr[right] > pivot) {
                 right--;
             }
             if (left >= right) {
