@@ -76,7 +76,7 @@ public class QuickSort {
         QuickSort quickSort = new QuickSort();
 
 //        int[] arr = {9, 9, 2, 5, 4, 8, 10, 6, 1, 10};
-        int[] arr = {1,1,2,3,1};
+        int[] arr = {2,4,2,6,2};
 //        int[] arr = randomArray(100);
         show(arr);
         quickSort.sort(arr);
