@@ -9,21 +9,21 @@ import java.util.Random;
  * @version 1.0.1 2022-03-19
  */
 public class Utils {
-    public static void swap(int[] arr, int left, int right) {
+    static void swap(int[] arr, int left, int right) {
         int tmp = arr[left];
         arr[left] = arr[right];
         arr[right] = tmp;
     }
 
-    public static boolean less(int v, int w) {
+    static boolean less(int v, int w) {
         return v < w;
     }
 
-    public static void show(int[] arr) {
+    static void show(int[] arr) {
         System.out.println(Arrays.toString(arr));
     }
 
-    public static boolean isSorted(int[] arr) {
+    static boolean isSorted(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
             if (less(arr[i + 1], arr[i])) {
@@ -33,7 +33,7 @@ public class Utils {
         return true;
     }
 
-    public static int[] randomArray(int N) {
+    static int[] randomArray(int N) {
         int[] arr = new int[N];
         Random random = new Random();
         for (int i = 0; i < N; i++) {

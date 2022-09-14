@@ -7,7 +7,7 @@ import java.util.Random;
  * @author xinchan
  * @version 1.0.1 2022-01-19
  */
-class Utils {
+public class Utils {
     /**
      * 交换数组中指定下标的两个元素
      *

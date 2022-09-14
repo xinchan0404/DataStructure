@@ -4,15 +4,15 @@ import static com.xinchan.datastructure.sort.pass3.Utils.*;
 
 /**
  * @author xinchan
- * @version 1.0.1 2022-09-12
+ * @version 1.0.1 2022-09-13
  */
 public class HeapSort {
     public void sort(int[] arr) {
         int n = arr.length;
-        for (int i = n / 2 - 1; i >= 0; i--) {
+        for (int i = arr.length / 2 - 1; i >= 0; i--) {
             adjustHeap(arr, i, n);
         }
-        for (int i = n - 1; i > 0; i--) {
+        for (int i = n -1; i > 0; i--) {
             swap(arr, 0, i);
             adjustHeap(arr, 0, i);
         }
@@ -20,7 +20,6 @@ public class HeapSort {
 
     private void adjustHeap(int[] arr, int i, int n) {
         int tmp = arr[i];
-
         for (int child = 2 * i + 1; child < n; child = 2 * child + 1) {
             if (child + 1 < n && arr[child] < arr[child + 1]) {
                 child++;
@@ -34,11 +33,10 @@ public class HeapSort {
         }
         arr[i] = tmp;
     }
-
     public static void main(String[] args) {
-        HeapSort heapSort = new HeapSort();
-//        int[] arr = new int[] {2,3,6,4,7,3};
+        //        int[] arr = {2,4,2,6,2};
         int[] arr = randomArray(10000);
+        HeapSort heapSort = new HeapSort();
 
         show(arr);
         heapSort.sort(arr);
