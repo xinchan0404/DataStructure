@@ -1,9 +1,13 @@
-package com.xinchan.datastructure.sort.pass4;
+package com.xinchan.datastructure.sort.pass5;
 
-import static com.xinchan.datastructure.sort.pass4.Utils.*;
+import static com.xinchan.datastructure.sort.pass5.Utils.*;
 
+/**
+ * @author xinchan
+ * @version 1.0.1 2023-02-08
+ */
 public class QuickSort {
-    public void sort(int[] arr) {
+    public void quickSort(int[] arr) {
         sort(arr, 0, arr.length - 1);
     }
 
@@ -45,12 +49,12 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = randomArray(1000);
-
-        QuickSort quickSOrt = new QuickSort();
+//        int[] arr = {2,4,2,6,2};
+        int[] arr = randomArray(10000);
+        QuickSort quickSort = new QuickSort();
 
         show(arr);
-        quickSOrt.sort(arr);
+        quickSort.quickSort(arr);
         show(arr);
         System.out.println("排序成功?" + isSorted(arr));
     }

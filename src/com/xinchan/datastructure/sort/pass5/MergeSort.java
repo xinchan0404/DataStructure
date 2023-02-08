@@ -1,12 +1,19 @@
-package com.xinchan.datastructure.sort.pass4;
+package com.xinchan.datastructure.sort.pass5;
 
-import static com.xinchan.datastructure.sort.pass4.Utils.*;
+import static com.xinchan.datastructure.sort.pass5.Utils.*;
 
+/**
+ * @author xinchan
+ * @version 1.0.1 2023-02-08
+ */
 public class MergeSort {
     private int[] auxArr;
 
-    public void sort(int[] arr) {
-        this.auxArr = new int[arr.length];
+    public MergeSort(int n) {
+        this.auxArr = new int[n];
+    }
+
+    public void mergeSort(int[] arr) {
         sort(arr, 0, arr.length - 1);
     }
 
@@ -24,27 +31,26 @@ public class MergeSort {
     private void merge(int[] arr, int left, int right) {
         System.arraycopy(arr, left, auxArr, left, right - left + 1);
 
-        int mid = (left + right) >>> 1, i = left, j = mid + 1;
+        int mid = (left + right) >>> 1, l = left, r = mid + 1;
         for (int k = left; k <= right; k++) {
-            if (i > mid) {
-                arr[k] = auxArr[j++];
-            } else if (j > right) {
-                arr[k] = auxArr[i++];
-            } else if (auxArr[i] < auxArr[j]) {
-                arr[k] = auxArr[i++];
+            if (l > mid) {
+                arr[k] = auxArr[r++];
+            } else if (r > right) {
+                arr[k] = auxArr[l++];
+            } else if (less(auxArr[l], auxArr[r])) {
+                arr[k] = auxArr[l++];
             } else {
-                arr[k] = auxArr[j++];
+                arr[k] = auxArr[r++];
             }
         }
     }
 
     public static void main(String[] args) {
-        int[] arr = randomArray(1000);
-
-        MergeSort mergeSort = new MergeSort();
+        int[] arr = randomArray(10000);
+        MergeSort mergeSort = new MergeSort(10000);
 
         show(arr);
-        mergeSort.sort(arr);
+        mergeSort.mergeSort(arr);
         show(arr);
         System.out.println("排序成功?" + isSorted(arr));
     }
