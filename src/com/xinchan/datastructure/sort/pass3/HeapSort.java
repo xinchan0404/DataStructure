@@ -12,7 +12,7 @@ public class HeapSort {
         for (int i = arr.length / 2 - 1; i >= 0; i--) {
             adjustHeap(arr, i, n);
         }
-        for (int i = n -1; i > 0; i--) {
+        for (int i = n - 1; i > 0; i--) {
             swap(arr, 0, i);
             adjustHeap(arr, 0, i);
         }
